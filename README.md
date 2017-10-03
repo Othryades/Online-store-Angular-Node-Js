@@ -14,10 +14,10 @@ My Store is a simple store using Angular and Node Js. You can register/login, pu
 
 1. Composer update.
 2. Run in Localhost (Uwamp, Xampp).
-3  Run Node server: Server/app.js
+3.  Run Node server: Server/app.js
 4. Go http://localhost/Project%203/Client/app/#/login 
-4. You can register or simply using the following Username (email): moris@gmail.com and password: 1234.
-6. Enjoy!
+5. You can register or simply using the following Username (email): moris@gmail.com and password: 1234.
+6. Profit!
 
 
 
