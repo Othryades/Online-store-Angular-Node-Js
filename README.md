@@ -1,6 +1,6 @@
 # My Store
 
-My Store is a simple store using last Angular and Node Js. You can register/login, purchase a CD, save it in cart and pay.
+My Store is a simple store using Angular and Node Js. You can register/login, purchase a CD, save it in cart and pay.
 
 ## Features
 
