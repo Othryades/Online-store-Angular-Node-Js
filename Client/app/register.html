@@ -1,0 +1,24 @@
+<form ng-controller="AuthController">
+    <div class="page-header">
+        <h1>
+            Register
+        </h1>
+    </div>
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" ng-model="name" id="name">
+    </div>
+    <div class="form-group">
+        <label for="email">Email address:</label>
+        <input type="email" class="form-control" ng-model="email" id="email">
+    </div>
+    <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" ng-model="password" id="pwd">
+    </div>
+
+
+    <button class="btn btn-default" ng-click="register()">Register</button>
+    or
+    <a ui-sref="login">login</a>
+</form>

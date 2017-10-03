@@ -1,0 +1,30 @@
+<div class="container" ng-controller="HomeController" ng-init="init()">
+    <div class="page-header">
+        <h1>Products</h1>
+    </div>
+    <table class="table products" style="background-color:#fff;">
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+        <tr ng-repeat="alb in products track by $index">
+            <td>
+                <img src="{{alb.image}}" style="width: 100px;height: 100px;" alt="">
+            </td>
+            <td>
+                {{alb.name}}
+            </td>
+            <td>
+                {{alb.price | currency}}
+            </td>
+            <td>
+
+                <button class="btn btn-success" ng-click="addToCart(alb)">
+                    Add to cart <i class="fa fa-plus"></i>
+                </button>
+            </td>
+        </tr>
+    </table>
+</div>

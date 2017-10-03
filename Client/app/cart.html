@@ -1,0 +1,74 @@
+<div class="col-md-12" ng-controller="CartController" ng-init="init()">
+    <h1>My Cart</h1>
+    <div class="col-xs-12" style="padding-top: 10px;padding-bottom: 10px;" ng-show="!showPay">
+        <button ng-click="showPay=true" class="btn btn-warning btn-lg">
+            Pay
+        </button>
+    </div>
+    <div class="col-xs-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">Albums</div>
+            <div class="panel-body">
+                <div class="col-sm-6 col-md-4" ng-repeat="item in cart track by $index">
+                    <div class="thumbnail">
+                        <img src="{{item.image}}" class="img-responsive">
+                        <div class="caption">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <h5>
+                                        Name: {{item.name}}</h5>
+                                </div>
+                                <div class="col-md-6 col-xs-6 price">
+                                    <h5>
+                                        Price: <label>{{item.price | currency}}</label></h5>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <a class="btn btn-primary btn-product"><span
+                                            class="glyphicon glyphicon-thumbs-up"></span> Like</a>
+                                </div>
+                                <div class="col-md-6">
+                                    <a class="btn btn-danger btn-product" ng-click="cart.splice($index,1)"><span
+                                            class="glyphicon glyphicon-trash"></span> Delete</a>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div ng-show="showPay">
+        <table class="table">
+            <tr>
+                <td>city</td>
+                <td>
+                    <input type="text" class="form-control" ng-model="city">
+                </td>
+            </tr>
+            <tr>
+                <td>address</td>
+                <td>
+                    <input type="text" class="form-control" ng-model="address">
+                </td>
+            </tr>
+            <tr>
+                <td>CreditCard</td>
+                <td>
+                    <input type="number" class="form-control" ng-model="creditCard">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button class="btn-primary btn" ng-click="pay()">Pay</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
